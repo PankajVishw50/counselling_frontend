@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Bebas+Neue&family=Faster+One&family=Lato&family=Oswald&family=Outfit&family=Roboto&family=Sofia+Sans+Semi+Condensed&family=Varela+Round&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+}
+body{
+    background: var(--background-color);
+}
+:root{
+    --blue: #1C82AD;
+    --background-color: #eefcfd;
+    --questions: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar{
+    height: 50px;
+    background: var(--blue);
+}
+nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 25px;
+}
+.header{
+    font-size: 20px;
+    margin-right: 25px;
+    font-family: "Bakbak one", sans-serif;
+    color: lightgoldenrodyellow;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+nav ul li{
+    display: flex;
+    align-items: flex-end
+}
+.arrow{
+    font-size: 20px;
+    margin-left: 5px;
+    color: black;
+}
+.find:hover span{
+    text-shadow: 2px 2px 2px white;
+}
+.find:hover{
+    border-bottom: 1px solid black;
+}
+
+
+.intro, .contact{
+    display: flex;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.ques{
+    flex: .5;
+    align-items: center;
+    background: var(--blue);
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+.ques > div{
+    /*border: 1px solid red;*/
+    font-family: var(--questions);
+    color: white;
+}
+.ques > div span{
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+.intro .more, .contact .more{
+    flex: .5;
+    display: flex;
+    padding: 0 25px;
+    justify-content: center;
+    align-items: center;
+}
+.intro .more > div, .contact .more > div{
+    font-size: 20px;
+    border: 1px solid black;
+    width: 500px;
+    padding: 25px 25px;
+    height: 100%;
+    box-shadow: 2px 2px 5px black;
+    font-family:  "outfit", sans-serif;
+}
+
+
+
+.about{
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+}
+.heading{
+    height: 100px;
+    background: var(--blue);
+    font-family: var(--questions);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.offers{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 25px;
+    height: 400px;
+    padding: 25px;
+}
+.offers > div{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px #ababab;
+    transition: box-shadow .1s linear;
+    min-width: 250px;
+}
+.offers h3{
+    font-size: 20px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 25px;
+}
+.offers p{
+    font-family: "Bebas Neus", sans-serif;
+}
+.offers span{
+    font-size: 75px;
+    color: var(--blue);
+    margin-top: auto;
+    width: fit-content;
+}
+.offers > div:hover{
+    box-shadow: none;
+}
+
+
+
+.counsellors{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+.list{
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+    /*border: 2px solid black;*/
+
+}
+.counsellor{
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-bottom: 3px solid gray;
+    padding: 5px 10px;
+}
+.counsellor > *{
+    /*border: 1px solid red;*/
+}
+.counsellor .image{
+    grid-row: 1 / 4;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.counsellor .name{
+    display: flex;
+    align-items: flex-end;
+    font-family: "Oswald", sans-serif;;
+}
+.counsellor .ratings{
+    grid-row: 2/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+}
+
+.counsellor .description{
+    grid-row: 1 / 4;
+    border-left: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+.counsellor .image{
+    background: url("resources/c_robert.jpg") no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+.counsellor:nth-child(2) .image{
+    background: url("resources/c_dwane.jpg") no-repeat center;
+    background-size: 70%;
+}
+.counsellor:nth-child(3) .image{
+    background: url("resources/c_marina.jpg") no-repeat center;
+    background-size: 70%;
+}
+.counsellor:nth-child(4) .image{
+    background: url("resources/c_simon.jpg") no-repeat center;
+    background-size: 70%;
+}
+.counsellor:nth-child(5) .image{
+    background: url("resources/counsellor5.jfif") no-repeat center;
+    background-size: 70%;
+}
+.clients, .price{
+    color: #696a6c;
+}
+.review{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-top: 3px;
+}
+.review span{
+    margin-right: 10px;
+}
+
+
+.contact{
+}
+.contact .more{
+    /*border: 1px solid red;*/
+}
+.contact .more > div{
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*padding: 25px 25px;*/
+    /*border: 1px solid blue;*/
+}
+.contact form{
+    /*border: 1px solid black;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    height: 100%;
+    padding: 0;
+}
+.contact form > *{
+    /*border: 1px solid green;*/
+}
+.contact h3{
+    text-align: center;
+    height: fit-content;
+    font-size: 30px;
+    margin: 0;
+}
+.contact form input{
+    margin: 0;
+    padding: 0 15px;
+    box-shadow: .5px .5px 2px gray;
+}
+.contact input:focus-visible{
+    /*border: 2px solid red*/
+    outline-color: var(--blue);
+}
+.contact .submit{
+    font-size: 16px;
+    font-family: "oswald", sans-serif;
+}
+.contact .submit:hover{
+    border: 2px solid var(--blue);
+}
+
+
+footer{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    color: white;
+    background: var(--blue);
+    padding: 10px 25px;
+    font-family: "lato", sans-serif;
+    font-size: 14px;
+
+
+}
+footer > *{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    border-right: 2px solid black;
+}
+.links{
+    align-items: start;
+}
+footer ul{
+    padding: 0 75px;
+}
+footer ul li{
+    margin: 4px 0;
+    cursor: pointer;
+}
+footer ul li:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list::-webkit-scrollbar{
+    width: .5em;
+}
+.list::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+
+
+
+
+
